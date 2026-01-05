@@ -1,6 +1,5 @@
 {
-    "name": "simple-bus/jms-serializer-bridge",
-    "type": "library",
+    "name": "dlakomski/jms-serializer-bridge",
     "description": "Bridge for using JMSSerializer as message serializer for SimpleBus/Asynchronous",
     "keywords": [
         "asynchronous",
@@ -24,22 +23,17 @@
             "homepage": "http://php-and-symfony.matthiasnoback.nl"
         }
     ],
+    "type": "library",
     "require": {
-        "php": "^8.0",
-        "jms/serializer": "^3.15",
-        "simple-bus/serialization": "^6.0"
-    },
-    "conflict": {
-        "jms/metadata": "<2.5.2"
+        "php": "^8.2",
+        "dlakomski/serialization": "^6.4",
+        "jms/serializer": "^3.15"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.11",
-        "phpunit/phpunit": "^9.5.5",
-        "symfony/phpunit-bridge": "^6.0",
-        "symfony/yaml": "^5.4 || ^6.0"
-    },
-    "config": {
-        "sort-packages": true
+        "phpunit/phpunit": "^11.5.46",
+        "symfony/phpunit-bridge": "^6.4.23 || ^7.4",
+        "symfony/yaml": "^6.4.23 || ^7.4"
     },
     "autoload": {
         "psr-4": {
@@ -50,6 +44,15 @@
         "psr-4": {
             "SimpleBus\\JMSSerializerBridge\\Tests\\": "tests"
         }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "conflict": {
+        "jms/metadata": "<2.5.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
